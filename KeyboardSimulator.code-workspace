@@ -1,0 +1,886 @@
+{
+	"folders": [
+		{
+			"name": "KeyboardSimulator",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "D:\\Unreal Engine\\UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+        "npm.autoDetect": "off",
+        "files.associations": {
+            "*.rh": "cpp"
+        }
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "KeyboardSimulator Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"Win64",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Test",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulator IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulator IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulator",
+					"IOS",
+					"Shipping",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulatorEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Debug",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulatorEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"KeyboardSimulatorEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"label": "KeyboardSimulatorEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"KeyboardSimulatorEditor",
+					"Win64",
+					"Development",
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Unreal Engine\\UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch KeyboardSimulator (Debug)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "KeyboardSimulator Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulator (DebugGame)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "KeyboardSimulator Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulator (Development)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "KeyboardSimulator Win64 Development Build",
+				"args": [
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulator (Test)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "KeyboardSimulator Win64 Test Build",
+				"args": [
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulator (Shipping)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "KeyboardSimulator Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulatorEditor (Debug)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "KeyboardSimulatorEditor Win64 Debug Build",
+				"args": [
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject"
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulatorEditor (DebugGame)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "KeyboardSimulatorEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject"
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch KeyboardSimulatorEditor (Development)",
+				"request": "launch",
+				"program": "D:\\Unreal Engine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "KeyboardSimulatorEditor Win64 Development Build",
+				"args": [
+					"D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject"
+				],
+				"cwd": "D:\\Unreal Engine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Unreal Engine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Unreal Engine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "D:\\Unreal Engine\\UE_5.3\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\Unreal Engine\\Unreal Projects\\KeyboardSimulator\\KeyboardSimulator\\KeyboardSimulator.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "externalTerminal",
+				"stopAtEntry": false,
+				"cwd": "D:\\Unreal Engine\\UE_5.3"
+			}
+		]
+	}
+}
