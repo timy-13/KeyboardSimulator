@@ -10,6 +10,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Engine/LocalPlayer.h"
+#include "GrapplingHookComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -20,6 +21,7 @@ AKeyboardSimulatorCharacter::AKeyboardSimulatorCharacter()
 {
 	// Character doesnt have a rifle at start
 	bHasRifle = false;
+    bHasGrapplingHook = false;
 	
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(55.f, 96.0f);
@@ -39,12 +41,16 @@ AKeyboardSimulatorCharacter::AKeyboardSimulatorCharacter()
 	//Mesh1P->SetRelativeRotation(FRotator(0.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-30.f, 0.f, -150.f));
 
+
+    GrapplingHookComponent = CreateDefaultSubobject<UGrapplingHookComponent>(TEXT("GrapplingHookComponent"));
+    GrapplingHookComponent->SetupAttachment(FirstPersonCameraComponent);
 }
 
 void AKeyboardSimulatorCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+    GrapplingHookComponent->InitialAttachHook(this);
 
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
@@ -54,7 +60,6 @@ void AKeyboardSimulatorCharacter::BeginPlay()
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
-
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -115,4 +120,14 @@ void AKeyboardSimulatorCharacter::SetHasRifle(bool bNewHasRifle)
 bool AKeyboardSimulatorCharacter::GetHasRifle()
 {
 	return bHasRifle;
+}
+
+void AKeyboardSimulatorCharacter::SetHasGrapplingHook(bool bNewHasGrapplingHook)
+{
+	bHasGrapplingHook = bNewHasGrapplingHook;
+}
+
+bool AKeyboardSimulatorCharacter::GetHasGrapplingHook()
+{
+	return bHasGrapplingHook;
 }

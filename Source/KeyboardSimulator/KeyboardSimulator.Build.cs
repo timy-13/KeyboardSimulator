@@ -8,6 +8,7 @@ public class KeyboardSimulator : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "CableComponent" });
+ PrivateIncludePathModuleNames.AddRange(new string[] { "CableComponent" });
 	}
 }

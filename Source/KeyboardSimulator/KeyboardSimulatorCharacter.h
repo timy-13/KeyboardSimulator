@@ -13,6 +13,7 @@ class UCameraComponent;
 class UInputAction;
 class UInputMappingContext;
 struct FInputActionValue;
+class UGrapplingHookComponent;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
@@ -28,6 +29,9 @@ class AKeyboardSimulatorCharacter : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FirstPersonCameraComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+    UGrapplingHookComponent* GrapplingHookComponent;
 
 	/** MappingContext */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
@@ -56,6 +60,12 @@ public:
 	/** Bool for AnimBP to switch to another animation set */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Weapon)
 	bool bHasRifle;
+
+    bool bHasGrapplingHook;
+
+    void SetHasGrapplingHook(bool bNewHasGrapplingHook);
+
+    bool GetHasGrapplingHook();
 
 	/** Setter to set the bool */
 	UFUNCTION(BlueprintCallable, Category = Weapon)

@@ -53,7 +53,7 @@ void UKeyMover::moveKey(float DeltaTime)
     FVector CurrentLocation = GetOwner()->GetActorLocation();
     float Speed = Offset.Length() / MoveTime;
 
-    FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed);
+    FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed); // this will need to be called in Tick for the player to actually move
     GetOwner()->SetActorLocation(NewLocation);
 }
 
