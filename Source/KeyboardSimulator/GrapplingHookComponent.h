@@ -21,10 +21,10 @@ public:
 	// Sets default values for this component's properties
 	UGrapplingHookComponent();
     
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input)
 	class UInputMappingContext* FireMappingContext;
 
-    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input)
     UInputAction* FireAction;
 
 	// Called every frame

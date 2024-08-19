@@ -8,6 +8,7 @@
 
 class UTriggerComponent;
 class UKeyMover;
+class UScreenWidget;
 
 UCLASS()
 class KEYBOARDSIMULATOR_API ABaseKey : public AActor
@@ -29,7 +30,14 @@ public:
     UFUNCTION(BlueprintCallable)
     FString GetKeyName(); 
 
+    UFUNCTION(BlueprintCallable)
+    void SetScreenWidget(UScreenWidget* TargetWidget);
+
 private:
+    UFUNCTION()
+    void UpdateScreenText();
+
+    void EnableSendText();
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
     UStaticMeshComponent* KeyMesh;
@@ -40,8 +48,14 @@ private:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
     UKeyMover* KeyMover;
 
+    UScreenWidget* ScreenWidget;
+
     UPROPERTY(EditAnywhere, Category = "Key")
     FString KeyName;
 
-    void OnKeyPressed();
+    FTimerHandle TextSentHandle;
+    bool bTextSent;
+
+    UPROPERTY(EditAnywhere, Category = "Key")
+    float TextSendDelay;
 };

@@ -20,7 +20,6 @@ void UTriggerComponent::BeginPlay()
 
     OnComponentBeginOverlap.AddDynamic(this, &UTriggerComponent::OnTriggerBeginOverlap);
     OnComponentEndOverlap.AddDynamic(this, &UTriggerComponent::OnTriggerEndOverlap);
-    //OnComponentEndOverlap.AddDynamic(this, &UTriggerComponent::OnTriggerEndOverlap);
 }
 
 void UTriggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
