@@ -13,6 +13,15 @@ class AKeyboardSimulatorGameMode : public AGameModeBase
 
 public:
 	AKeyboardSimulatorGameMode();
+
+    float GetAccuracy();
+    void SetAccuracy(float NewAccuracy);
+
+    float CalculateAccuracy(FString Original, FString Copy);
+
+private:
+    float Accuracy;
+    int CommissionCount;
 };
 
 
