@@ -44,6 +44,10 @@ class AKeyboardSimulatorCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
+
+    /** Menu Toggle Action **/
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+    UInputAction* MenuToggleAction;
 	
 public:
 	AKeyboardSimulatorCharacter();
@@ -81,6 +85,8 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+    void MenuToggle();
 
 protected:
 	// APawn interface

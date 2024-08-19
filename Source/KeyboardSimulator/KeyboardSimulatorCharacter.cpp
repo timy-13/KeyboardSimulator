@@ -1,6 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "KeyboardSimulatorCharacter.h"
+#include "KeyboardSimulatorPlayerController.h"
 #include "KeyboardSimulatorProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
@@ -78,6 +79,9 @@ void AKeyboardSimulatorCharacter::SetupPlayerInputComponent(UInputComponent* Pla
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AKeyboardSimulatorCharacter::Look);
+
+        // Menu Toggle
+        EnhancedInputComponent->BindAction(MenuToggleAction, ETriggerEvent::Completed, this, &AKeyboardSimulatorCharacter::MenuToggle);
 	}
 	else
 	{
@@ -110,6 +114,14 @@ void AKeyboardSimulatorCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AKeyboardSimulatorCharacter::MenuToggle()
+{
+    if (Controller)
+    {
+        Cast<AKeyboardSimulatorPlayerController>(Controller)->ToggleMenuWidget();
+    }
 }
 
 void AKeyboardSimulatorCharacter::SetHasRifle(bool bNewHasRifle)
