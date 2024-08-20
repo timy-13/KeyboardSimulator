@@ -8,24 +8,49 @@ namespace AccuracyCalculator
 {
     int CalculateLevenshteinDistance(FString Original, FString Copy)
     {
-        float MaxLength = FMath::Max(Original.Len(), Copy.Len());
+        // Construct a matrix of Levenshtein distances for all the possible combinations of prefixes
+        // The previous and current rows of the matrix being constructed
+        TArray<int> PreviousRow;
+        TArray<int> CurrentRow;
 
-        if (Original.IsEmpty() || Copy.IsEmpty())
+        PreviousRow.Init(0, Copy.Len()+1);
+        CurrentRow.Init(0, Copy.Len()+1);
+
+        // Initialize the first row of the matrix
+        // Distances to insert characters to create Original.
+        for (int i = 0; i <= Copy.Len(); ++i)
         {
-            return MaxLength;
+            PreviousRow[i] = i;
         }
 
-        int substitution = CalculateLevenshteinDistance(Original.RightChop(1), Copy.RightChop(1));
-
-        if (Original[0] == Copy[0])
+        for (int i = 0; i < Original.Len(); ++i)
         {
-            return substitution;
-        }
-        
-        int insertion = CalculateLevenshteinDistance(Original.RightChop(1), Copy);
-        int deletion = CalculateLevenshteinDistance(Original, Copy.RightChop(1));
+            // Initialize the first element of the CurrentRow (initializing first column of matrix)
+            // Distances to delete characters from Original to create Copy
+            CurrentRow[0] = i + 1;
 
-        return FMath::Min3(substitution, insertion, deletion);
+            // Fill in remaining values by taking minimum of deletion, insertion, substitution
+            for (int j = 0; j < Copy.Len(); ++j)
+            {
+                int deletion = PreviousRow[j + 1] + 1;
+                int insertion = CurrentRow[j] + 1;
+
+                int substitution;
+                if (Original[i] == Copy[j])
+                {
+                    substitution = PreviousRow[j];
+                }
+                else
+                {
+                    substitution = PreviousRow[j] + 1;
+                }
+
+                CurrentRow[j + 1] = FMath::Min3(deletion, insertion, substitution);
+            }
+            Swap(PreviousRow, CurrentRow);
+        }
+
+        return PreviousRow[Copy.Len()];
     }
 
     float CalculateAccuracy(int LevenshteinDistance, int MaxLength)
